@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StocktonCalifornia.net – Discover the Real Stockton</title>
+  <meta name="description" content="Explore Stockton like a local. Find hidden gems, top sights, local eats, and laid-back tips from real Stocktonians. Your friendly guide to California’s underrated river city." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4faff;
+      --primary: #0077cc;
+      --accent: #0099e6;
+      --text: #1a1a1a;
+      --muted: #555;
+      --card-bg: #ffffff;
+      --section-bg: #eaf4fc;
+      --shadow: rgba(0, 0, 0, 0.06);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      color: white;
+      padding: 4rem 1rem 3rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.8rem;
+    }
+
+h1 {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+    main {
+      max-width: 840px;
+      margin: -2rem auto 4rem;
+      padding: 0 1rem;
+    }
+
+    .bubble {
+      background-color: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px var(--shadow);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .blog-post {
+      margin-bottom: 1.5rem;
+    }
+
+    .blog-post a {
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .blog-post a:hover {
+      text-decoration: underline;
+    }
+
+    .blog-post p {
+      margin: 0.4rem 0 0;
+      color: var(--muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .bubble {
+        padding: 1.5rem;
+      }
+    }
+
+.floating-nav {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #ffffffdd;
+  padding: 1rem 0.75rem;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.floating-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.floating-nav li {
+  margin: 0.5rem 0;
+}
+
+.floating-nav a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: block;
+  padding: 0.25rem 0.5rem;
+  transition: background 0.2s ease;
+  border-radius: 4px;
+}
+
+.floating-nav a:hover {
+  background: var(--section-bg);
+}
+
+/* Hide on small screens */
+@media (max-width: 768px) {
+  .floating-nav {
+    display: none;
+  }
+}
+
+.float-thumb {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  width: 300px;
+  max-width: 45%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Prevent float overflow */
+#food::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Optional: stack image above content on small screens */
+@media (max-width: 600px) {
+  .float-thumb {
+    float: none;
+    display: block;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+<nav class="floating-nav">
+  <ul>
+    <li><a href="#free-things">Free Things</a></li>
+    <li><a href="#weekend">Weekend</a></li>
+    <li><a href="#food">Food</a></li>
+    <li><a href="#waterfront">Waterfront</a></li>
+    <li><a href="#parks">Parks</a></li>
+    <li><a href="#haggin">Museum</a></li>
+    <li><a href="#artwalk">Art Walk</a></li>
+    <li><a href="#family">Family</a></li>
+    <li><a href="#roadtrip">Road Trip</a></li>
+    <li><a href="#hidden-gems">Hidden Gems</a></li>
+    <li><a href="#map">Map</a></li>
+  </ul>
+</nav>
+
+  <header>
+    <h1>StocktonCalifornia.net - Discover the Real Stockton CA</h1>
+    <img src="img/stockton-california-logo.png" alt="Stockton California" height="180">
+    <p>Real tips. Local flavor. Zero fluff.</p>
+  </header>
+
+  <main>
+
+<div class="bubble">
+  <h2>Explore Stockton</h2>
+  <p>Looking for the <a href="#free-things">best things to do in Stockton</a>, California? You’ve landed in the right place. StocktonCalifornia.net is your local guide to the real Stockton — no corporate fluff, just honest recommendations from people who know the city inside and out.</p>
+
+  <p>Whether you're planning a <a href="#weekend">weekend getaway</a>, a <a href="#roadtrip">road trip stop</a>, or just curious about what makes this Central Valley city special, we’ve got you covered. Discover scenic spots along the <a href="#waterfront">Stockton waterfront</a>, <a href="#food">local restaurants</a> that serve unforgettable tacos and tamales, <a href="#parks">underrated parks</a> perfect for a family picnic, and <a href="#art">art galleries</a> tucked away downtown.</p>
+
+  <p>From the historic charm of the <a href="#haggin">Haggin Museum</a> to <a href="#hidden-gems">hidden gems</a> like neighborhood bakeries and monthly <a href="#artwalk">art walks</a>, Stockton offers more than most travelers expect. And if you’re looking for <a href="#free-things">free things to do in Stockton</a> or <a href="#family">family-friendly attractions</a>, we’ve built this site to highlight exactly that — the good stuff, without the guesswork.</p>
+</div>
+
+
+
+<div id="free-things" class="bubble">
+    <img src="img/free.png" alt="Free Things To Do in Stockton CA" class="float-thumb">
+  <h2>Free Things to Do in Stockton</h2>
+  <p>Stockton may fly under the radar, but it's packed with free things to do if you know where to look. Whether you're strolling the waterfront or hunting down murals downtown, there’s no need to spend a dime to have a good time here.</p>
+
+  <ul>
+    <li>🚶‍♀️ <strong>Walk the Downtown Waterfront</strong> – Relax with river views, public art, and the occasional duck parade — all free, all walkable.</li>
+    
+    <li>🎨 <strong>Stockton Art Walk</strong> – Held every second Friday, this free monthly event features open studios, outdoor galleries, and street performers.</li>
+    
+    <li>🌳 <strong>Victory Park</strong> – A local favorite for picnics, frisbee, or just soaking up the Central Valley sun under massive oak trees.</li>
+    
+    <li>🖼️ <strong>Haggin Museum (Free 1st Saturday)</strong> – Admission is free every first Saturday of the month — perfect for families or art lovers on a budget.</li>
+    
+    <li>🧘‍♂️ <strong>Free Yoga in the Park</strong> – Community instructors host donation-based or free yoga sessions throughout the summer in local parks.</li>
+    
+    <li>📸 <strong>DIY Mural Tour</strong> – Stockton’s alleyways and side streets are full of colorful murals. Bring your camera — it’s an Instagram goldmine.</li>
+  </ul>
+
+  <p>Most tourists blow past Stockton on I-5 without ever realizing how much you can explore here for free. But if you slow down, skip the chains, and step outside, you’ll find a city full of personality, public space, and local color — no wallet required.</p>
+</div>
+
+
+<div id="weekend" class="bubble">
+  <h2>Weekend Getaway: 48 Hours in Stockton</h2>
+  <p>Planning a quick weekend escape to Stockton? Whether you're coming in from the Bay Area, Sacramento, or just passing through on I‑5, Stockton makes a surprisingly fun and affordable weekend destination. Here’s how to make the most of 48 hours in town — no stress, no planning headache.</p>
+
+  <h3>Saturday: Local Flavor + Riverside Chill</h3>
+  <ul>
+    <li>☕ <strong>Start at <a href="#food">Trail Coffee Roasters</a></strong> – Grab a cold brew and fresh pastry to kick off the day in downtown Stockton.</li>
+    
+    <li>🖼️ <strong>Hit the <a href="#haggin">Haggin Museum</a></strong> – Soak in fine art and local history in peaceful Victory Park (it’s free the first Saturday of each month!).</li>
+    
+    <li>🌮 <strong>Lunch at <a href="#food">Tamales Mia</a></strong> – Best masa in the Valley. You’ll thank us later.</li>
+    
+    <li>🌊 <strong>Wander the <a href="#waterfront">Downtown Waterfront</a></strong> – Scenic views, ducks, bridges, and chill time. Stop for ice cream if the weather’s hot.</li>
+    
+    <li>🎨 <strong>Evening at the <a href="#artwalk">Stockton Art Walk</a></strong> – If it’s the second Friday, this monthly event is a must. Art, food, and street music downtown.</li>
+  </ul>
+
+  <h3>Sunday: Parks, Bites, and Hidden Gems</h3>
+  <ul>
+    <li>🌳 <strong>Morning stroll at <a href="#parks">Oak Grove Regional Park</a></strong> – Bring coffee and walk the lake. Bonus: paddle boats if the weather’s right.</li>
+    
+    <li>🥟 <strong>Brunch at Best Lumpia</strong> – Trust us. Lumpia + garlic rice + sunny picnic = magic.</li>
+    
+    <li>🛍️ <strong>Browse the Downtown Farmers Market</strong> – Local produce, handmade goods, and Stockton vibes in full effect (Sundays, early morning).</li>
+    
+    <li>📸 <strong>Wrap it up with a DIY <a href="#free-things">Mural Tour</a></strong> – Snap pics of Stockton’s most colorful alleyways and public art before heading home.</li>
+  </ul>
+
+  <p>This is just a taste of what’s possible in a weekend. Want more ideas? Check out our guides to <a href="#food">where to eat</a>, <a href="#parks">best parks</a>, and <a href="#free-things">free things to do in Stockton</a>. Or just show up and let the city surprise you — it usually does.</p>
+</div>
+
+
+<div id="top-picks" class="bubble">
+  <h2>Top Picks & Local Favorites</h2>
+  <p>These are the spots Stocktonians actually recommend — whether you're new in town or just visiting for a weekend. From riverside walks to handmade tamales, here are a few can't-miss highlights.</p>
+  <ul>
+    <li>📍 <strong><a href="#haggin">Haggin Museum</a></strong> – Nestled in Victory Park, this local favorite blends fine art and regional history. Expect works by 19th-century masters and rotating exhibits that showcase California’s past and present.</li>
+    
+    <li>🌮 <strong><a href="#food">Tamales Mia</a></strong> – This family-run gem has quietly become a legend for masa lovers. If you're hunting for authentic Mexican food in Stockton, don’t skip the green chile pork tamales.</li>
+    
+    <li>🌊 <strong><a href="#waterfront">Downtown Waterfront</a></strong> – Great for walking, biking, or sipping coffee along the canal. This revitalized area offers river views, local cafes, and a relaxing break from I-5 traffic madness.</li>
+    
+    <li>🎨 <strong><a href="#artwalk">Stockton Art Walk</a></strong> – Held monthly in the downtown core, the art walk brings together muralists, musicians, and makers. A great way to discover local talent and grab a bite from a street vendor.</li>
+    
+    <li>🥾 <strong><a href="#parks">Oak Grove Regional Park</a></strong> – With shaded trails, paddle boats, and picnic zones, this 180-acre park is perfect for families or solo adventurers. Look out for the Nature Center and native wildlife along the lake.</li>
+  </ul>
+</div>
+
+
+<div id="food" class="bubble">
+  <img src="img/food.png" alt="Stockton CA Street Food" class="float-thumb">
+  <h2>Where to Eat in Stockton</h2>
+  <p>Stockton’s food scene is one of its best-kept secrets — a flavorful blend of Mexican heritage, Southeast Asian influence, and good old-fashioned Central Valley comfort food. Whether you're looking for hole-in-the-wall tacos, farmers market freshness, or Instagram-worthy desserts, Stockton’s got the goods.</p>
+
+  <ul>
+    <li>🌮 <strong>Tamales Mia</strong> – A local legend for handmade tamales and authentic flavors. Don’t skip the green chile pork or the mole when it’s available.</li>
+    
+    <li>🍜 <strong>Saigon Vietnamese Restaurant</strong> – Long-running family spot with standout pho, crispy rolls, and the best iced coffee on the Miracle Mile.</li>
+    
+    <li>🍕 <strong>Dante's California-Style Pizza</strong> – Craft pizza with creative toppings and locally sourced ingredients. Great for groups or date night.</li>
+    
+    <li>🥟 <strong>Best Lumpia</strong> – No-frills counter serving crunchy, craveable lumpia in classic and spicy varieties. Always fresh. Always packed.</li>
+    
+    <li>☕ <strong>Trail Coffee Roasters</strong> – Third-wave coffee meets chill industrial vibes. Great for remote work, meetups, or a morning recharge downtown.</li>
+    
+    <li>🍦 <strong>The Ice Cream Company</strong> – Old-school family parlor with rotating seasonal flavors and massive waffle cones. Pure nostalgia with every scoop.</li>
+  </ul>
+
+  <p>There’s no shortage of chain restaurants on Pacific Avenue — but skip those. The real Stockton lives in its corner kitchens, food trucks, and family-owned diners that have been perfecting their craft for decades. Come hungry, and explore the city one bite at a time.</p>
+</div>
+
+
+
+<div id="waterfront" class="bubble">
+  <h2>Discover the Stockton Waterfront</h2>
+  <p>The Stockton Waterfront is the heart of the city’s revival — and one of the best free places to explore on foot. Stretching through downtown along the Deep Water Channel, this area offers walkable river views, bridges, wildlife, cafes, and occasional live music. It’s where locals go to think, walk, fish, and unwind.</p>
+
+  <ul>
+    <li>🚶‍♂️ <strong>Weber Point Events Center</strong> – A central hub with an open-air amphitheater, splash fountain (great for kids), and scenic views of the water. Host to events like concerts and the annual Asparagus Festival.</li>
+    
+    <li>☕ <strong>Poppy Coffee or Trail Roasters</strong> – Grab a drink from a nearby café and stroll the paved pathways. Bonus: some of the best people-watching in town.</li>
+    
+    <li>🦆 <strong>Waterfront Walks</strong> – The channel is home to ducks, cranes, and turtles — especially in the mornings. The trail runs along McLeod Lake and is dotted with benches and shaded spots.</li>
+    
+    <li>🚣 <strong>Stockton Marina</strong> – Watch boats come in, talk to local anglers, or sit on the dock with a good book. You’ll find food trucks nearby on weekends.</li>
+    
+    <li>📸 <strong>Best Views at Golden Gate Bridge (no, not that one)</strong> – Stockton’s own version is a small golden bridge connecting the park to downtown. Great for photos at sunset.</li>
+  </ul>
+
+  <p>Whether you’re planning a <a href="#weekend">weekend getaway</a> or just passing through, the <a href="#free-things">downtown waterfront</a> is one of the best ways to experience Stockton without spending a dime. Pack some snacks, bring a camera, and take your time — it’s not the destination, it’s the vibe.</p>
+</div>
+
+
+<div id="parks" class="bubble">
+  <h2>Best Parks in Stockton</h2>
+  <p>Stockton is more than pavement and freeways — it’s full of lush, underrated parks where locals go to walk, picnic, paddle, or just breathe. Whether you're traveling solo, with kids, or just looking for a shady spot to recharge, these parks offer real green-space vibes right in the heart of the Central Valley.</p>
+
+  <ul>
+    <li>🌳 <strong><a href="#weekend">Oak Grove Regional Park</a></strong> – One of the most popular parks in Stockton for a reason. Lakeside views, paddle boats, disc golf, picnic areas, and tons of tree cover. Great for families or a quiet morning stroll.</li>
+    
+    <li>🛶 <strong>Victory Park</strong> – Home to the <a href="#haggin">Haggin Museum</a>, this downtown-adjacent spot features open lawns, old-growth trees, and relaxed vibes. Often hosts concerts and community events in summer.</li>
+    
+    <li>🦆 <strong>Louis Park</strong> – Tucked near the river and marina, this low-key favorite has shaded trails, duck ponds, and great sunset views. Perfect for a post-lunch walk after exploring the <a href="#waterfront">Stockton Waterfront</a>.</li>
+    
+    <li>🧺 <strong>Pixie Woods</strong> – A storybook-style kids’ park that's surprisingly charming. While it has a small entrance fee, the nearby picnic areas and gardens are free to access and worth a visit.</li>
+    
+    <li>🚴‍♀️ <strong>Calaveras River Bike Trail</strong> – A multi-mile trail running east-west through the city, ideal for biking, jogging, or people-watching. You'll pass parks, bridges, and even some local wildlife.</li>
+  </ul>
+
+  <p>Want to plan a park-hopping weekend? Combine <a href="#parks">Oak Grove</a> in the morning with <a href="#parks">Victory Park</a> for lunch and a museum visit, then catch the sunset at <a href="#parks">Louis Park</a> near the river. You’ll see three different sides of Stockton — all in one chill day outdoors.</p>
+</div>
+
+
+
+<div id="haggin" class="bubble">
+  <h2>The Haggin Museum</h2>
+  <p>Set inside the serene <a href="#parks">Victory Park</a>, the Haggin Museum is one of Stockton’s most iconic cultural spaces. It’s part art museum, part local history archive — and all charm. Whether you're an art lover, a curious traveler, or a family looking for something low-key and enriching, the Haggin delivers.</p>
+
+  <ul>
+    <li>🖼️ <strong>Fine Art Wing</strong> – Featuring works by 19th-century European painters, American Impressionists, and rotating exhibits from California-based artists.</li>
+
+    <li>🏛️ <strong>Local History Galleries</strong> – Dive into Stockton’s deep agricultural, maritime, and industrial roots through immersive displays and vintage artifacts.</li>
+
+    <li>🧒 <strong>Kid-Friendly Activities</strong> – The museum hosts scavenger hunts, interactive programs, and family days that make culture feel accessible and fun.</li>
+
+    <li>🎟️ <strong>Free Entry 1st Saturdays</strong> – Enjoy the entire museum for free on the first Saturday of each month — a great excuse to explore if you’re new to town.</li>
+  </ul>
+
+  <p>The Haggin is small enough to explore in under an hour, but rich enough to leave you inspired. Pair it with a coffee in the park or a lunch stop nearby and you’ve got a perfect half-day outing.</p>
+</div>
+
+
+
+<div id="artwalk" class="bubble">
+  <img src="img/artwalk.png" alt="Stockton CA Street Art Walk" class="float-thumb">
+  <h2>Stockton Art Walk</h2>
+  <p>The Stockton Art Walk is where the city’s creative scene comes alive. Held on the second Friday of each month, this free community event turns downtown into a mash-up of music, murals, food trucks, and open-air galleries. If you're in town on the right night, don’t miss it.</p>
+
+  <ul>
+    <li>🎨 <strong>Pop-Up Galleries</strong> – Local artists showcase their work in storefronts, sidewalk booths, and studio spaces — from street art to ceramics to live painting.</li>
+
+    <li>🎶 <strong>Live Music & DJs</strong> – Expect everything from jazz trios to vinyl sets spinning in alleys. The soundtrack shifts from block to block.</li>
+
+    <li>🌮 <strong>Street Eats</strong> – Food trucks line the streets offering tacos, lumpia, smoothies, and more. Great excuse to skip dinner and snack your way through the art.</li>
+
+    <li>🛍️ <strong>Handmade Vendors</strong> – Jewelry, candles, T-shirts, zines — this is the best place to find one-of-a-kind goods made right here in Stockton.</li>
+  </ul>
+
+  <p>The Art Walk captures the city's grit and heart in one vibrant evening. It’s a must-hit experience for creatives, couples, curious travelers, and anyone who wants to see the real Stockton beyond the headlines. Pair it with a stroll along the <a href="#waterfront">waterfront</a> or a late bite downtown.</p>
+</div>
+
+
+
+
+<div id="family" class="bubble">
+  <h2>Family-Friendly Things to Do in Stockton</h2>
+  <p>Stockton is surprisingly kid-friendly — with parks to roam, hands-on museums, and fun spots that won’t break your budget. Whether you’ve got toddlers, teens, or a whole mixed crew, there’s something here to keep everyone entertained (and off their screens).</p>
+
+  <ul>
+    <li>🧺 <strong><a href="#parks">Oak Grove Regional Park</a></strong> – Kids love the paddle boats, wide trails, and shady picnic spots. Bonus: there’s a disc golf course and ducks galore.</li>
+
+    <li>🖼️ <strong><a href="#haggin">Haggin Museum</a></strong> – It’s not just for grown-ups. The Haggin has rotating exhibits, kid-friendly scavenger hunts, and free admission every first Saturday.</li>
+
+    <li>🎠 <strong>Pixie Woods</strong> – A fantasy-style amusement park for young kids with a train ride, pirate ship, and splash zones. Open seasonally and super affordable.</li>
+
+    <li>🌳 <strong><a href="#parks">Victory Park</a></strong> – Great for tossing a frisbee, riding scooters, or just laying out under big trees with snacks and storybooks.</li>
+
+    <li>🚶‍♀️ <strong><a href="#free-things">Waterfront Walks</a></strong> – Pack the stroller or scooters and head downtown. The paved trails are flat, scenic, and full of ducks, fountains, and snack stops.</li>
+
+    <li>🍦 <strong><a href="#food">The Ice Cream Company</a></strong> – Top it off with an old-school cone and a sugar rush. It’s a Stockton rite of passage.</li>
+  </ul>
+
+  <p>Whether you're planning a weekend day trip or just need a few hours to let the kids burn energy, Stockton makes it easy. There’s nature, culture, and comfort food — all wrapped in a relaxed Central Valley pace.</p>
+</div>
+
+
+<div id="roadtrip" class="bubble">
+  <h2>Worth the Detour: Road Trip Stop in Stockton</h2>
+  <p>Flying down I‑5 or Highway 99? You might not realize you’re flying past one of California’s most underrated road trip stops. Stockton makes for a perfect 1–3 hour break on any Central Valley drive — with better food, cooler parks, and cheaper gas than most freeway exits.</p>
+
+  <ul>
+    <li>🌮 <strong>Local Food > Fast Food</strong> – Instead of another tired burger joint, take a 5-minute detour off the freeway and grab <a href="#food">authentic tamales, pho, lumpia, or tacos</a> from family-run spots with local flavor.</li>
+    
+    <li>🦆 <strong>Stretch Your Legs at the <a href="#waterfront">Waterfront</a></strong> – A quick walk along McLeod Lake will refresh your brain and body more than a gas station parking lot ever could. Watch ducks, grab coffee, and breathe.</li>
+    
+    <li>🖼️ <strong>Mini Culture Hit</strong> – If you have an hour or more, check out the <a href="#haggin">Haggin Museum</a> or catch a local art pop-up near downtown.</li>
+    
+    <li>☕ <strong>Quick Recharge</strong> – Need caffeine? <a href="#food">Trail Coffee Roasters</a> or Poppy Coffee Co. both offer great beans, fast service, and clean bathrooms — real road trip wins.</li>
+    
+    <li>⛽ <strong>Fuel + Finds</strong> – Stockton’s gas is often cheaper than Sacramento or Modesto, and the side streets near Pacific Ave are full of funky thrift stores and snack spots if you want a bonus browse.</li>
+  </ul>
+
+  <p>Don’t sleep on Stockton. For road trippers with even a little time, it beats the heck out of another chain exit or sketchy travel plaza. Stretch out, grab something good, and enjoy a quick slice of real California in between the coasts and mountains.</p>
+</div>
+
+
+
+
+<div id="hidden-gems" class="bubble">
+  <h2>Hidden Gems in Stockton</h2>
+  <p>Some of the best things in Stockton aren’t on the billboards — they’re tucked into alleyways, side streets, and unassuming storefronts. These hidden gems might not show up on top-10 lists, but they’re where locals go when they want something real, low-key, and memorable.</p>
+
+  <ul>
+    <li>🥟 <strong>Best Lumpia</strong> – It’s not a marketing gimmick — that’s literally the name, and it delivers. This humble counter spot serves some of the crispiest, most craveable Filipino lumpia in the Central Valley. Pair it with garlic rice and sit outside.</li>
+    
+    <li>🎨 <strong>Mural Alley</strong> – Behind Market and San Joaquin streets, you’ll find a tucked-away corridor filled with vibrant murals, layered tags, and evolving public art. It’s a favorite photo spot for locals and totally free to explore. See also: our <a href="#free-things">DIY Mural Tour</a>.</li>
+
+    <li>🛍️ <strong>Buttercup Home Interiors</strong> – Part vintage boutique, part local artist co-op, part greenhouse. This off-the-radar shop mixes art prints, plants, gifts, and weird-but-wonderful energy.</li>
+
+    <li>🥖 <strong>Genova Bakery</strong> – A nearly 100-year-old Italian bakery hidden in a residential block. Still family-owned. Still baking fresh bread daily. Walk in, take a deep breath, and grab a sandwich or two.</li>
+
+    <li>🎭 <strong>The Write Place</strong> – A hidden black-box theater and storytelling space nestled inside a strip center. Check their schedule — performances and workshops rotate monthly and are often donation-based.</li>
+  </ul>
+
+  <p>These spots don’t scream for attention — they quietly win people over. If you’re the kind of traveler who values realness over ratings, add these to your list. They’re part of what makes Stockton feel like Stockton.</p>
+</div>
+
+
+
+<!--
+<div id="blog" class="bubble">
+  <h2>Fresh from the Blog</h2>
+
+  <h3>🎯 Things to Do</h3>
+  <div class="blog-post">
+    <a href="#">10 Things to Do in Stockton This Weekend</a>
+    <p>A local’s guide to the most fun, free, and family-friendly things to do in Stockton this weekend — including hidden parks, outdoor events, and where to grab a bite nearby.</p>
+  </div>
+  <div class="blog-post">
+    <a href="#">A Chill Day at the Stockton Waterfront</a>
+    <p>Follow our low-key itinerary for spending a full day by the water — scenic walks, cozy coffee shops, and sunset photo ops included.</p>
+  </div>
+  <div class="blog-post">
+    <a href="#">Underrated Parks in Stockton for a Weekend Escape</a>
+    <p>Everyone knows Oak Grove Park — but what about the quiet green spaces locals keep to themselves? We highlight a few overlooked gems.</p>
+  </div>
+
+  <h3>🌮 Food & Drink</h3>
+  <div class="blog-post">
+    <a href="#">The Best Tacos in Stockton — Ranked</a>
+    <p>We ate our way across Stockton to find the city’s top taco joints. From hole-in-the-wall taquerias to family-owned trucks — here's the good stuff.</p>
+  </div>
+
+  <h3>🎨 Art & Culture</h3>
+  <div class="blog-post">
+    <a href="#">Is the Haggin Museum Actually Worth Visiting?</a>
+    <p>We dig into why this historic art and history museum is more than just a rainy-day option. Discover its roots, collection, and when to go for free.</p>
+  </div>
+  <div class="blog-post">
+    <a href="#">Guide to the Stockton Art Walk</a>
+    <p>Everything you need to know about this monthly mashup of murals, music, and microbrews — including where to park and what not to miss.</p>
+  </div>
+
+  <h3>🛏️ Where to Stay</h3>
+  <div class="blog-post">
+    <a href="#">Where to Stay in Stockton: Local Picks</a>
+    <p>Looking for a place to stay that’s close to the action but still affordable? We list Stockton’s best lodging options, from boutique to budget.</p>
+  </div>
+</div>
+-->
+
+
+
+
+
+<div id="map" class="bubble">
+  <h2>Map of Must-See Spots in Stockton</h2>
+  <p>Want to see everything at a glance? Here’s a quick map of our favorite picks — from murals and museums to coffee shops, parks, and waterfront hangouts. Tap around, zoom in, and build your perfect route through Stockton’s most lovable neighborhoods.</p>
+
+  <!-- Embedded Google Map centered on Stockton -->
+  <div style="border-radius: 12px; overflow: hidden; margin-top: 1.5rem;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50752.4211859023!2d-121.3638323!3d37.9700121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80900d3f4c6a9a6f%3A0x5ed9f4d33d94cbe1!2sStockton%2C%20CA!5e0!3m2!1sen!2sus!4v1719264264564"
+      width="100%"
+      height="400"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <p>We’ll be updating this map soon to include pinpoint markers for every gem on this site. Until then, use it to get your bearings — and maybe discover something unplanned along the way.</p>
+</div>
+
+
+
+
+  </main>
+
+  <footer>
+    &copy; 2025 StocktonCalifornia.net — Built with good vibes and local love.
+  </footer>
+
+</body>
+</html>
